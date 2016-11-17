@@ -37,8 +37,8 @@ question = gets.chomp
 shake = rand(1..20)
 
 message = @client.account.messages.create(
-  :from => "+1xxxxxxxxxx",
-  :to => "+1xxxxxxxxxx",
+  :from => "+1xxxxxxxxxx", #your twilio number
+  :to => "+1xxxxxxxxxx", #your phone number
   :body => "You asked: #{question} Here is my answer: #{answers[shake]}"
 )
 
